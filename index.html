@@ -2,13 +2,13 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>SmileDent — Преміальна стоматологія нового покоління</title>
-    <meta name="description" content="SmileDent — сучасна стоматологічна клініка з преміальним сервісом. Цифрова діагностика, імплантація, естетична стоматологія.">
+    <meta name="description" content="SmileDent — сучасна стоматологічна клініка з преміальним сервісом. Результати до/після, які вражають. Цифрова діагностика, імплантація, естетична стоматологія.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>🦷</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
@@ -17,305 +17,312 @@
     <nav class="nav">
         <a href="#" class="nav__logo">Smile<span>Dent</span></a>
         <div class="nav__links" id="nav-links">
-            <a href="#services">Послуги</a>
-            <a href="#doctors">Лікарі</a>
             <a href="#results">Результати</a>
-            <a href="#reviews">Відгуки</a>
+            <a href="#journey">Як працюємо</a>
+            <a href="#cases">Кейси</a>
+            <a href="#trust">Довіра</a>
             <a href="#contact">Контакти</a>
         </div>
         <a href="#contact" class="nav__cta">Записатися</a>
-        <button class="nav__burger" id="burger" aria-label="Меню">
+        <button class="nav__burger" id="burger" aria-label="Відкрити меню">
             <span></span><span></span>
         </button>
     </nav>
 </header>
 
 <div class="mobile-menu" id="mobile-menu">
-    <a href="#services" onclick="closeMenu()">Послуги</a>
-    <a href="#doctors" onclick="closeMenu()">Лікарі</a>
     <a href="#results" onclick="closeMenu()">Результати</a>
-    <a href="#reviews" onclick="closeMenu()">Відгуки</a>
+    <a href="#journey" onclick="closeMenu()">Як працюємо</a>
+    <a href="#cases" onclick="closeMenu()">Кейси</a>
+    <a href="#trust" onclick="closeMenu()">Довіра</a>
     <a href="#contact" onclick="closeMenu()">Контакти</a>
     <a href="#contact" class="mobile-menu__cta" onclick="closeMenu()">Записатися на прийом</a>
 </div>
 
-<!-- Hero -->
-<section class="hero">
-    <div class="hero__content" data-reveal>
-        <div class="hero__badge">
-            <span class="hero__badge-dot"></span>
-            №1 приватна стоматологія Києва
-        </div>
-        <h1 class="hero__title">Посмішка,<br>яку ви<br><span>заслуговуєте</span></h1>
-        <p class="hero__desc">Цифрова діагностика. Безболісне лікування. Результат, який вражає з першого дня.</p>
-        <div class="hero__actions">
-            <a href="#contact" class="btn btn--primary">Записатися на прийом</a>
-            <a href="#services" class="btn btn--ghost">Наші послуги</a>
-        </div>
-        <div class="hero__trust">
-            <div class="hero__trust-item">
-                <span class="hero__trust-num">12+</span>
-                <span class="hero__trust-label">років досвіду</span>
-            </div>
-            <div class="hero__trust-item">
-                <span class="hero__trust-num">5000+</span>
-                <span class="hero__trust-label">пацієнтів</span>
-            </div>
-            <div class="hero__trust-item">
-                <span class="hero__trust-num">98%</span>
-                <span class="hero__trust-label">рекомендують</span>
-            </div>
-        </div>
+<!-- HERO: Before/After Slider as Main Element -->
+<section class="hero" id="results">
+    <div class="hero__text" data-reveal>
+        <h1 class="hero__title">Ваша ідеальна <span class="shimmer">посмішка</span><br>починається тут</h1>
+        <p class="hero__desc">Перетягніть повзунок — і побачте, як ми змінюємо життя наших пацієнтів. Результат, який говорить сам за себе.</p>
     </div>
-    <div class="hero__visual" data-reveal="delay">
-        <div class="hero__image-container">
-            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=85" alt="SmileDent клініка" class="hero__image">
-            <div class="hero__float hero__float--1">✓ Безболісно</div>
-            <div class="hero__float hero__float--2">★ 4.9 рейтинг</div>
+    <div class="hero__slider" data-reveal="delay">
+        <div class="ba-hero" id="ba-hero" data-ba>
+            <div class="ba-hero__before">
+                <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&q=85" alt="До лікування — зуби пацієнта до втручання">
+                <span class="ba-hero__label">До</span>
+            </div>
+            <div class="ba-hero__after">
+                <img src="https://images.unsplash.com/photo-1581585090292-4b5e11e71704?w=1200&q=85" alt="Після лікування — ідеальна посмішка">
+                <span class="ba-hero__label ba-hero__label--after">Після</span>
+            </div>
+            <div class="ba-hero__handle" id="ba-handle">
+                <div class="ba-hero__handle-line"></div>
+                <div class="ba-hero__handle-circle" aria-label="Перетягніть для порівняння">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M8 4l-6 8 6 8M16 4l6 8-6 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="ba-hero__handle-line"></div>
+            </div>
+        </div>
+        <p class="hero__slider-hint">← перетягніть для порівняння →</p>
+    </div>
+    <div class="hero__cta" data-reveal>
+        <a href="#contact" class="btn btn--primary btn--lg">Хочу такий результат</a>
+        <a href="#cases" class="btn btn--ghost btn--lg">Більше кейсів</a>
+    </div>
+</section>
+
+<!-- PATIENT JOURNEY -->
+<section class="section" id="journey">
+    <div class="section__header" data-reveal>
+        <span class="section__tag">Як ми працюємо</span>
+        <h2 class="section__title">Шлях до ідеальної посмішки</h2>
+        <p class="section__sub">Від першої зустрічі до результату, який вражає</p>
+    </div>
+    <div class="journey" data-reveal>
+        <div class="journey__step">
+            <div class="journey__icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M8 7a4 4 0 108 0 4 4 0 00-8 0zM6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="journey__num">01</span>
+            <h3 class="journey__title">Консультація</h3>
+            <p class="journey__desc">Безкоштовний огляд, 3D‑сканування та детальне обговорення ваших побажань</p>
+        </div>
+        <div class="journey__connector"><span></span></div>
+        <div class="journey__step">
+            <div class="journey__icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M9 12h6M9 16h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="journey__num">02</span>
+            <h3 class="journey__title">Індивідуальний план</h3>
+            <p class="journey__desc">Цифрове моделювання майбутньої посмішки. Ви бачите результат до початку лікування</p>
+        </div>
+        <div class="journey__connector"><span></span></div>
+        <div class="journey__step">
+            <div class="journey__icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="journey__num">03</span>
+            <h3 class="journey__title">Лікування</h3>
+            <p class="journey__desc">Безболісні процедури з сучасною анестезією. Комфорт на кожному етапі</p>
+        </div>
+        <div class="journey__connector"><span></span></div>
+        <div class="journey__step">
+            <div class="journey__icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="journey__num">04</span>
+            <h3 class="journey__title">Результат</h3>
+            <p class="journey__desc">Посмішка вашої мрії. Гарантія на роботу та підтримка після лікування</p>
         </div>
     </div>
 </section>
 
-<!-- Services -->
-<section class="section" id="services">
+<!-- TRUST BLOCK -->
+<section class="section section--alt" id="trust">
     <div class="section__header" data-reveal>
-        <span class="section__tag">Послуги</span>
-        <h2 class="section__title">Повний спектр<br>стоматологічної допомоги</h2>
+        <span class="section__tag">Чому ми</span>
+        <h2 class="section__title">Цифри, яким довіряють</h2>
     </div>
-    <div class="services">
-        <article class="service-card" data-reveal>
-            <div class="service-card__icon">🦷</div>
-            <div class="service-card__number">01</div>
-            <h3 class="service-card__title">Імплантація</h3>
-            <p class="service-card__desc">Швейцарські імпланти з пожиттєвою гарантією. Безболісна процедура та швидке відновлення.</p>
-            <span class="service-card__price">від 18 000 ₴</span>
-        </article>
-        <article class="service-card" data-reveal>
-            <div class="service-card__icon">✨</div>
-            <div class="service-card__number">02</div>
-            <h3 class="service-card__title">Вініри та коронки</h3>
-            <p class="service-card__desc">Ідеальна посмішка за 2 візити. Цифрове моделювання результату перед початком.</p>
-            <span class="service-card__price">від 8 000 ₴</span>
-        </article>
-        <article class="service-card" data-reveal>
-            <div class="service-card__icon">💎</div>
-            <div class="service-card__number">03</div>
-            <h3 class="service-card__title">Відбілювання</h3>
-            <p class="service-card__desc">Zoom 4 — до 8 тонів за одну процедуру без пошкодження емалі.</p>
-            <span class="service-card__price">від 4 500 ₴</span>
-        </article>
-        <article class="service-card" data-reveal>
-            <div class="service-card__icon">⟟</div>
-            <div class="service-card__number">04</div>
-            <h3 class="service-card__title">Ортодонтія</h3>
-            <p class="service-card__desc">Невидимі елайнери Invisalign. Рівні зуби без дискомфорту.</p>
-            <span class="service-card__price">від 25 000 ₴</span>
-        </article>
-        <article class="service-card" data-reveal>
-            <div class="service-card__icon">🛡️</div>
-            <div class="service-card__number">05</div>
-            <h3 class="service-card__title">Терапія</h3>
-            <p class="service-card__desc">Лікування карієсу та реставрація. Сучасні матеріали, безболісні методи.</p>
-            <span class="service-card__price">від 1 500 ₴</span>
-        </article>
-        <article class="service-card" data-reveal>
-            <div class="service-card__icon">🧸</div>
-            <div class="service-card__number">06</div>
-            <h3 class="service-card__title">Дитяча стоматологія</h3>
-            <p class="service-card__desc">Ігрова атмосфера без страху. М'який підхід з перших зубів.</p>
-            <span class="service-card__price">від 800 ₴</span>
-        </article>
-    </div>
-</section>
-
-<!-- Doctors -->
-<section class="section section--alt" id="doctors">
-    <div class="section__header" data-reveal>
-        <span class="section__tag">Команда</span>
-        <h2 class="section__title">Лікарі, яким довіряють</h2>
-    </div>
-    <div class="doctors">
-        <div class="doctor-card" data-reveal>
-            <div class="doctor-card__image">
-                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80" alt="Олександр Ковальчук" loading="lazy">
-                <div class="doctor-card__overlay">
-                    <span>15 років досвіду</span>
-                    <span>3000+ імплантацій</span>
-                    <span>Сертифікати ICO, DGI</span>
+    <div class="trust" data-reveal>
+        <div class="trust__stats">
+            <div class="trust__stat">
+                <span class="trust__number" data-count="12">0</span><span class="trust__plus">+</span>
+                <span class="trust__label">років досвіду</span>
+            </div>
+            <div class="trust__stat">
+                <span class="trust__number" data-count="5000">0</span><span class="trust__plus">+</span>
+                <span class="trust__label">задоволених пацієнтів</span>
+            </div>
+            <div class="trust__stat">
+                <span class="trust__number" data-count="98">0</span><span class="trust__plus">%</span>
+                <span class="trust__label">рекомендують нас</span>
+            </div>
+            <div class="trust__stat">
+                <span class="trust__number" data-count="15">0</span><span class="trust__plus">+</span>
+                <span class="trust__label">сертифікатів</span>
+            </div>
+        </div>
+        <div class="trust__certs">
+            <div class="trust__cert">
+                <div class="trust__cert-icon">🏆</div>
+                <div class="trust__cert-info">
+                    <h4>ISO 9001:2015</h4>
+                    <p>Міжнародний стандарт якості</p>
                 </div>
             </div>
-            <div class="doctor-card__info">
-                <h3>Олександр Ковальчук</h3>
-                <span class="doctor-card__role">Головний лікар · Імплантолог</span>
-            </div>
-        </div>
-        <div class="doctor-card" data-reveal>
-            <div class="doctor-card__image">
-                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80" alt="Марія Литвиненко" loading="lazy">
-                <div class="doctor-card__overlay">
-                    <span>10 років практики</span>
-                    <span>Invisalign certified</span>
-                    <span>Дизайн посмішки</span>
+            <div class="trust__cert">
+                <div class="trust__cert-icon">🎓</div>
+                <div class="trust__cert-info">
+                    <h4>ICO International</h4>
+                    <p>Сертифікація імплантологів</p>
                 </div>
             </div>
-            <div class="doctor-card__info">
-                <h3>Марія Литвиненко</h3>
-                <span class="doctor-card__role">Ортодонт · Естетист</span>
-            </div>
-        </div>
-        <div class="doctor-card" data-reveal>
-            <div class="doctor-card__image">
-                <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=600&q=80" alt="Андрій Мельник" loading="lazy">
-                <div class="doctor-card__overlay">
-                    <span>12 років хірургії</span>
-                    <span>Мікрохірургія</span>
-                    <span>Кісткова пластика</span>
+            <div class="trust__cert">
+                <div class="trust__cert-icon">⭐</div>
+                <div class="trust__cert-info">
+                    <h4>Invisalign Diamond</h4>
+                    <p>Провайдер вищого рівня</p>
                 </div>
             </div>
-            <div class="doctor-card__info">
-                <h3>Андрій Мельник</h3>
-                <span class="doctor-card__role">Хірург · Пародонтолог</span>
+            <div class="trust__cert">
+                <div class="trust__cert-icon">🛡️</div>
+                <div class="trust__cert-info">
+                    <h4>DGI Germany</h4>
+                    <p>Німецьке товариство імплантології</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Before/After -->
-<section class="section" id="results">
+<!-- 3 PATIENT CASES -->
+<section class="section" id="cases">
     <div class="section__header" data-reveal>
-        <span class="section__tag">Результати</span>
-        <h2 class="section__title">До і після</h2>
-        <p class="section__sub">Перетягніть повзунок для порівняння</p>
+        <span class="section__tag">Кейси пацієнтів</span>
+        <h2 class="section__title">Реальні історії перетворення</h2>
+        <p class="section__sub">Кожен кейс — це чиєсь нове життя з посмішкою</p>
     </div>
-    <div class="results" data-reveal>
-        <div class="ba-slider" data-ba>
-            <div class="ba-slider__before">
-                <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80" alt="До лікування">
-                <span class="ba-slider__label">До</span>
+
+    <div class="cases">
+        <!-- Case 1 -->
+        <article class="case" data-reveal>
+            <div class="case__slider" data-ba>
+                <div class="case__before">
+                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80" alt="Кейс 1 — до лікування" loading="lazy">
+                    <span class="case__label">До</span>
+                </div>
+                <div class="case__after">
+                    <img src="https://images.unsplash.com/photo-1581585090292-4b5e11e71704?w=800&q=80" alt="Кейс 1 — після лікування" loading="lazy">
+                    <span class="case__label case__label--after">Після</span>
+                </div>
+                <div class="case__handle">
+                    <div class="case__handle-line"></div>
+                    <div class="case__handle-circle">⟷</div>
+                    <div class="case__handle-line"></div>
+                </div>
             </div>
-            <div class="ba-slider__after">
-                <img src="https://images.unsplash.com/photo-1581585090292-4b5e11e71704?w=800&q=80" alt="Після лікування">
-                <span class="ba-slider__label ba-slider__label--after">Після</span>
+            <div class="case__info">
+                <span class="case__tag">Вініри E-max</span>
+                <h3 class="case__title">Олена, 34 роки</h3>
+                <p class="case__desc">Повна реконструкція зони посмішки: 10 вінірів E-max. Пацієнтка соромилася посміхатися 10 років. Тепер посмішка — її візитна картка.</p>
+                <div class="case__meta">
+                    <span>⏱ 2 візити</span>
+                    <span>📅 14 днів</span>
+                    <span>✓ Гарантія 10 років</span>
+                </div>
             </div>
-            <div class="ba-slider__handle">
-                <div class="ba-slider__handle-line"></div>
-                <div class="ba-slider__handle-circle">⟷</div>
-                <div class="ba-slider__handle-line"></div>
+        </article>
+
+        <!-- Case 2 -->
+        <article class="case case--reverse" data-reveal>
+            <div class="case__slider" data-ba>
+                <div class="case__before">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80" alt="Кейс 2 — до лікування" loading="lazy">
+                    <span class="case__label">До</span>
+                </div>
+                <div class="case__after">
+                    <img src="https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?w=800&q=80" alt="Кейс 2 — після лікування" loading="lazy">
+                    <span class="case__label case__label--after">Після</span>
+                </div>
+                <div class="case__handle">
+                    <div class="case__handle-line"></div>
+                    <div class="case__handle-circle">⟷</div>
+                    <div class="case__handle-line"></div>
+                </div>
             </div>
-        </div>
-        <div class="results__info">
-            <h4>Вініри E-max · Повна реконструкція</h4>
-            <p>10 вінірів · 2 візити · 14 днів</p>
-        </div>
+            <div class="case__info">
+                <span class="case__tag">Імплантація + коронки</span>
+                <h3 class="case__title">Дмитро, 45 років</h3>
+                <p class="case__desc">Відновлення 4 зубів на імплантах Nobel Biocare. Жодного болю під час процедури. Через 3 місяці — повноцінне життя.</p>
+                <div class="case__meta">
+                    <span>⏱ 4 візити</span>
+                    <span>📅 3 місяці</span>
+                    <span>✓ Пожиттєва гарантія</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Case 3 -->
+        <article class="case" data-reveal>
+            <div class="case__slider" data-ba>
+                <div class="case__before">
+                    <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&q=80" alt="Кейс 3 — до лікування" loading="lazy">
+                    <span class="case__label">До</span>
+                </div>
+                <div class="case__after">
+                    <img src="https://images.unsplash.com/photo-1601063476271-a159fae71f7d?w=800&q=80" alt="Кейс 3 — після лікування" loading="lazy">
+                    <span class="case__label case__label--after">Після</span>
+                </div>
+                <div class="case__handle">
+                    <div class="case__handle-line"></div>
+                    <div class="case__handle-circle">⟷</div>
+                    <div class="case__handle-line"></div>
+                </div>
+            </div>
+            <div class="case__info">
+                <span class="case__tag">Відбілювання Zoom 4</span>
+                <h3 class="case__title">Ірина, 28 років</h3>
+                <p class="case__desc">Професійне відбілювання на 8 тонів за 1 годину. Без пошкодження емалі, без чутливості. Результат тримається 2+ роки.</p>
+                <div class="case__meta">
+                    <span>⏱ 1 візит</span>
+                    <span>📅 1 година</span>
+                    <span>✓ 8 тонів різниці</span>
+                </div>
+            </div>
+        </article>
     </div>
 </section>
 
-<!-- Reviews -->
+<!-- REVIEWS -->
 <section class="section section--alt" id="reviews">
     <div class="section__header" data-reveal>
         <span class="section__tag">Відгуки</span>
         <h2 class="section__title">Що кажуть пацієнти</h2>
     </div>
-    <div class="reviews-slider" data-reveal>
-        <div class="reviews-track" id="reviews-track">
-            <blockquote class="review">
-                <div class="review__stars">★★★★★</div>
-                <p class="review__text">"Вперше в житті не боялась стоматолога. Атмосфера, підхід, результат — все на найвищому рівні. Мої вініри виглядають натурально."</p>
-                <footer class="review__author">
-                    <div class="review__avatar">О</div>
-                    <div>
-                        <cite>Олена Кравченко</cite>
-                        <span>Вініри · 2025</span>
-                    </div>
-                </footer>
-            </blockquote>
-            <blockquote class="review">
-                <div class="review__stars">★★★★★</div>
-                <p class="review__text">"Робив імплантацію двох зубів. Процедура набагато легша, ніж очікував. Через 3 місяці забув, що там щось штучне."</p>
-                <footer class="review__author">
-                    <div class="review__avatar">Д</div>
-                    <div>
-                        <cite>Дмитро Шевченко</cite>
-                        <span>Імплантація · 2025</span>
-                    </div>
-                </footer>
-            </blockquote>
-            <blockquote class="review">
-                <div class="review__stars">★★★★★</div>
-                <p class="review__text">"Привела дитину — тепер вона сама просить піти до лікаря. Ігрова кімната, мультики, лікар-чарівниця. Рекомендую батькам!"</p>
-                <footer class="review__author">
-                    <div class="review__avatar">А</div>
-                    <div>
-                        <cite>Анна Бондар</cite>
-                        <span>Дитяча · 2025</span>
-                    </div>
-                </footer>
-            </blockquote>
-            <blockquote class="review">
-                <div class="review__stars">★★★★★</div>
-                <p class="review__text">"Відбілювання Zoom зробило неймовірний ефект. 6 тонів різниці! Процедура комфортна, результат миттєвий."</p>
-                <footer class="review__author">
-                    <div class="review__avatar">І</div>
-                    <div>
-                        <cite>Ірина Коваль</cite>
-                        <span>Відбілювання · 2026</span>
-                    </div>
-                </footer>
-            </blockquote>
-        </div>
-        <div class="reviews-nav">
-            <button class="reviews-nav__btn" onclick="slideReviews(-1)">←</button>
-            <button class="reviews-nav__btn" onclick="slideReviews(1)">→</button>
-        </div>
+    <div class="reviews" data-reveal>
+        <blockquote class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p>"Вперше в житті не боялась стоматолога. Мої вініри виглядають абсолютно натурально — ніхто не вірить, що це робота лікаря."</p>
+            <footer>
+                <cite>Олена Кравченко</cite>
+                <span>Вініри · 2026</span>
+            </footer>
+        </blockquote>
+        <blockquote class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p>"Імплантація двох зубів пройшла настільки легко, що я здивувався. Через 3 місяці забув, де штучні зуби."</p>
+            <footer>
+                <cite>Дмитро Шевченко</cite>
+                <span>Імплантація · 2026</span>
+            </footer>
+        </blockquote>
+        <blockquote class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p>"Відбілювання Zoom — це магія. 6 тонів різниці за годину! Процедура комфортна, результат миттєвий."</p>
+            <footer>
+                <cite>Ірина Коваль</cite>
+                <span>Відбілювання · 2026</span>
+            </footer>
+        </blockquote>
     </div>
 </section>
 
-<!-- FAQ -->
-<section class="section" id="faq">
-    <div class="section__header" data-reveal>
-        <span class="section__tag">FAQ</span>
-        <h2 class="section__title">Часті питання</h2>
-    </div>
-    <div class="faq" data-reveal>
-        <details class="faq__item">
-            <summary>Чи боляче ставити імпланти?</summary>
-            <div class="faq__answer"><p>Ні. Місцева анестезія повністю знімає біль. Після операції легкий дискомфорт 2-3 дні, який знімається знеболюючим.</p></div>
-        </details>
-        <details class="faq__item">
-            <summary>Скільки часу займають вініри?</summary>
-            <div class="faq__answer"><p>2 візити: підготовка + фіксація. Між ними 7-10 днів на виготовлення в лабораторії.</p></div>
-        </details>
-        <details class="faq__item">
-            <summary>Чи є розстрочка?</summary>
-            <div class="faq__answer"><p>Безвідсоткова розстрочка до 12 місяців на лікування від 5000 ₴. Оформлення 5 хвилин.</p></div>
-        </details>
-        <details class="faq__item">
-            <summary>Що входить в першу консультацію?</summary>
-            <div class="faq__answer"><p>Огляд, цифровий знімок, план лікування, розрахунок вартості. Перша консультація безкоштовна.</p></div>
-        </details>
-        <details class="faq__item">
-            <summary>Чи приймаєте дітей?</summary>
-            <div class="faq__answer"><p>Так, від 2 років. Спеціальний дитячий кабінет з ігровою зоною та досвідчений дитячий лікар.</p></div>
-        </details>
-    </div>
-</section>
-
-<!-- Contact -->
+<!-- CONTACT -->
 <section class="section section--dark" id="contact">
     <div class="section__header" data-reveal>
-        <span class="section__tag section__tag--light">Запис</span>
-        <h2 class="section__title section__title--light">Запишіться на прийом</h2>
-        <p class="section__sub section__sub--light">Перша консультація — безкоштовно</p>
+        <span class="section__tag section__tag--light">Готові?</span>
+        <h2 class="section__title section__title--light">Ваша нова посмішка<br>чекає на вас</h2>
+        <p class="section__sub section__sub--light">Перша консультація — безкоштовно. Запишіться зараз.</p>
     </div>
     <div class="contact" data-reveal>
         <form class="contact__form" id="contact-form" novalidate>
             <div class="form-group">
-                <input type="text" name="name" placeholder=" " required id="cf-name">
+                <input type="text" name="name" placeholder=" " required id="cf-name" autocomplete="name">
                 <label for="cf-name">Ваше ім'я</label>
                 <span class="form-group__error">Вкажіть ім'я</span>
             </div>
             <div class="form-group">
-                <input type="tel" name="phone" placeholder=" " required id="cf-phone">
+                <input type="tel" name="phone" placeholder=" " required id="cf-phone" autocomplete="tel">
                 <label for="cf-phone">Телефон</label>
                 <span class="form-group__error">Вкажіть телефон</span>
             </div>
@@ -323,21 +330,20 @@
                 <select name="service" required id="cf-service">
                     <option value="" disabled selected></option>
                     <option>Консультація</option>
-                    <option>Імплантація</option>
                     <option>Вініри</option>
+                    <option>Імплантація</option>
                     <option>Відбілювання</option>
                     <option>Ортодонтія</option>
                     <option>Лікування</option>
-                    <option>Дитяча стоматологія</option>
                 </select>
                 <label for="cf-service">Оберіть послугу</label>
             </div>
-            <button type="submit" class="btn btn--primary btn--full" id="cf-btn">
-                <span class="btn__text">Записатися</span>
+            <button type="submit" class="btn btn--accent btn--full" id="cf-btn">
+                <span class="btn__text">Хочу красиву посмішку</span>
                 <span class="btn__loader" style="display:none;">⟳</span>
             </button>
             <div class="contact__success" id="cf-success" style="display:none;">
-                <span>✓</span> Дякуємо! Зателефонуємо вам протягом 30 хвилин.
+                <span>✓</span> Дякуємо! Зателефонуємо протягом 30 хвилин.
             </div>
             <p class="contact__privacy">Натискаючи кнопку, ви погоджуєтесь з обробкою персональних даних</p>
         </form>
@@ -365,100 +371,109 @@
 <footer class="footer">
     <div class="footer__inner">
         <a href="#" class="footer__logo">Smile<span>Dent</span></a>
-        <p class="footer__copy">© 2026 SmileDent. Демонстраційний проєкт.</p>
+        <p class="footer__copy">© 2026 SmileDent. Преміальна стоматологія.</p>
         <p class="footer__credit">Розробка: <a href="https://t.me/MarkoStepaniuk" target="_blank">MarkLabs Agency</a></p>
     </div>
 </footer>
 
 <script>
 // Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(function(a) {
-    a.addEventListener('click', function(e) {
-        var t = document.querySelector(this.getAttribute('href'));
-        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+        var t=document.querySelector(this.getAttribute('href'));
+        if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
     });
 });
 
-// Header
-window.addEventListener('scroll', function() {
-    document.getElementById('header').classList.toggle('header--scrolled', scrollY > 60);
+// Header scroll
+window.addEventListener('scroll',function(){
+    document.getElementById('header').classList.toggle('header--scrolled',scrollY>60);
 });
 
 // Mobile menu
-var burger = document.getElementById('burger'), mob = document.getElementById('mobile-menu');
-burger.onclick = function() { burger.classList.toggle('active'); mob.classList.toggle('active'); document.body.style.overflow = mob.classList.contains('active') ? 'hidden' : ''; };
-function closeMenu() { burger.classList.remove('active'); mob.classList.remove('active'); document.body.style.overflow = ''; }
+var burger=document.getElementById('burger'),mob=document.getElementById('mobile-menu');
+burger.onclick=function(){burger.classList.toggle('active');mob.classList.toggle('active');document.body.style.overflow=mob.classList.contains('active')?'hidden':'';};
+function closeMenu(){burger.classList.remove('active');mob.classList.remove('active');document.body.style.overflow='';}
 
-// Reveal animations
-var revealObserver = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('revealed'); });
-}, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-document.querySelectorAll('[data-reveal]').forEach(function(el) { revealObserver.observe(el); });
+// Reveal on scroll
+var revealObs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('revealed');});
+},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('[data-reveal]').forEach(function(el){revealObs.observe(el);});
 
-// Before/After Slider
-document.querySelectorAll('[data-ba]').forEach(function(slider) {
-    var handle = slider.querySelector('.ba-slider__handle');
-    var after = slider.querySelector('.ba-slider__after');
-    var isDragging = false;
+// Before/After Sliders (all)
+document.querySelectorAll('[data-ba]').forEach(function(slider){
+    var handle=slider.querySelector('[class*="handle"]');
+    var afterEl=slider.querySelector('[class*="after"]');
+    var isDragging=false;
 
-    function setPosition(x) {
-        var rect = slider.getBoundingClientRect();
-        var pos = Math.max(0, Math.min(1, (x - rect.left) / rect.width));
-        handle.style.left = (pos * 100) + '%';
-        after.style.clipPath = 'inset(0 0 0 ' + (pos * 100) + '%)';
+    function setPos(x){
+        var rect=slider.getBoundingClientRect();
+        var pos=Math.max(0.05,Math.min(0.95,(x-rect.left)/rect.width));
+        handle.style.left=(pos*100)+'%';
+        afterEl.style.clipPath='inset(0 0 0 '+(pos*100)+'%)';
     }
 
-    slider.addEventListener('mousedown', function(e) { isDragging = true; setPosition(e.clientX); });
-    window.addEventListener('mousemove', function(e) { if (isDragging) setPosition(e.clientX); });
-    window.addEventListener('mouseup', function() { isDragging = false; });
-    slider.addEventListener('touchstart', function(e) { isDragging = true; setPosition(e.touches[0].clientX); }, {passive:true});
-    window.addEventListener('touchmove', function(e) { if (isDragging) setPosition(e.touches[0].clientX); }, {passive:true});
-    window.addEventListener('touchend', function() { isDragging = false; });
+    slider.addEventListener('mousedown',function(e){isDragging=true;setPos(e.clientX);e.preventDefault();});
+    window.addEventListener('mousemove',function(e){if(isDragging)setPos(e.clientX);});
+    window.addEventListener('mouseup',function(){isDragging=false;});
+    slider.addEventListener('touchstart',function(e){isDragging=true;setPos(e.touches[0].clientX);},{passive:true});
+    window.addEventListener('touchmove',function(e){if(isDragging){setPos(e.touches[0].clientX);}},{passive:true});
+    window.addEventListener('touchend',function(){isDragging=false;});
 
-    // Init at 50%
-    after.style.clipPath = 'inset(0 0 0 50%)';
-    handle.style.left = '50%';
+    // Init 50%
+    afterEl.style.clipPath='inset(0 0 0 50%)';
+    handle.style.left='50%';
 });
 
-// Reviews Slider
-var reviewsPos = 0;
-function slideReviews(dir) {
-    var track = document.getElementById('reviews-track');
-    var cards = track.querySelectorAll('.review');
-    var cardWidth = cards[0].offsetWidth + 24;
-    var maxPos = -(cards.length * cardWidth - track.parentElement.offsetWidth);
-    reviewsPos = Math.max(maxPos, Math.min(0, reviewsPos - dir * cardWidth));
-    track.style.transform = 'translateX(' + reviewsPos + 'px)';
+// Animated counters
+var counted=false;
+function animateCounters(){
+    if(counted)return;
+    var nums=document.querySelectorAll('[data-count]');
+    if(!nums.length)return;
+    var rect=nums[0].closest('.trust__stats').getBoundingClientRect();
+    if(rect.top<window.innerHeight*0.85){
+        counted=true;
+        nums.forEach(function(el){
+            var target=parseInt(el.getAttribute('data-count'));
+            var duration=1800;
+            var start=performance.now();
+            function tick(now){
+                var progress=Math.min((now-start)/duration,1);
+                var eased=1-Math.pow(1-progress,3);
+                el.textContent=Math.floor(eased*target);
+                if(progress<1)requestAnimationFrame(tick);
+                else el.textContent=target;
+            }
+            requestAnimationFrame(tick);
+        });
+    }
 }
-// Auto-scroll reviews
-setInterval(function() { slideReviews(1); }, 5000);
+window.addEventListener('scroll',animateCounters);
+animateCounters();
 
 // Contact Form
-document.getElementById('contact-form').addEventListener('submit', function(e) {
+document.getElementById('contact-form').addEventListener('submit',function(e){
     e.preventDefault();
-    var form = this;
-    var valid = true;
-    form.querySelectorAll('[required]').forEach(function(input) {
-        var group = input.closest('.form-group');
-        if (!input.value.trim()) { group.classList.add('error'); valid = false; }
-        else { group.classList.remove('error'); }
+    var form=this,valid=true;
+    form.querySelectorAll('[required]').forEach(function(input){
+        var group=input.closest('.form-group');
+        if(!input.value.trim()){group.classList.add('error');valid=false;}
+        else{group.classList.remove('error');}
     });
-    if (!valid) return;
-
-    var btn = document.getElementById('cf-btn');
-    btn.querySelector('.btn__text').style.display = 'none';
-    btn.querySelector('.btn__loader').style.display = 'inline';
-    btn.disabled = true;
-
-    setTimeout(function() {
-        form.style.display = 'none';
-        document.getElementById('cf-success').style.display = 'flex';
-    }, 1500);
+    if(!valid)return;
+    var btn=document.getElementById('cf-btn');
+    btn.querySelector('.btn__text').style.display='none';
+    btn.querySelector('.btn__loader').style.display='inline';
+    btn.disabled=true;
+    setTimeout(function(){
+        form.style.display='none';
+        document.getElementById('cf-success').style.display='flex';
+    },1500);
 });
-
-// Remove error on input
-document.querySelectorAll('.form-group input, .form-group select').forEach(function(el) {
-    el.addEventListener('input', function() { this.closest('.form-group').classList.remove('error'); });
+document.querySelectorAll('.form-group input,.form-group select').forEach(function(el){
+    el.addEventListener('input',function(){this.closest('.form-group').classList.remove('error');});
 });
 </script>
 </body>
