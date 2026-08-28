@@ -656,3 +656,42 @@ p { color: var(--text-secondary); font-size: 0.95rem; }
     .btn { padding: 0.95rem 1.75rem; font-size: 0.85rem; }
     .btn--lg { padding: 1rem 2rem; }
 }
+
+
+/* === SmileDent Realism Upgrade === */
+
+/* Prices */
+.prices { max-width: 720px; margin: 0 auto; }
+.price-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.1rem 0; border-bottom: 1px solid var(--border);
+}
+.price-row:last-child { border-bottom: none; }
+.price-row__name { font-size: 0.95rem; font-weight: 500; color: var(--text); }
+.price-row__val { font-size: 0.95rem; font-weight: 700; color: var(--accent); white-space: nowrap; }
+
+/* Doctors */
+.doctors { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.doctor { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease); }
+.doctor:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.06); }
+.doctor__photo { aspect-ratio: 4/5; overflow: hidden; }
+.doctor__photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+.doctor:hover .doctor__photo img { transform: scale(1.04); }
+.doctor__info { padding: 1.5rem; }
+.doctor__info h3 { font-size: 1.1rem; margin-bottom: 0.25rem; }
+.doctor__spec { display: block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.15rem; }
+.doctor__exp { display: block; font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0.75rem; }
+.doctor__info p { font-size: 0.85rem; line-height: 1.6; }
+
+/* FAQ */
+.faq { max-width: 720px; margin: 0 auto; }
+.faq__item { border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 0.75rem; padding: 0 1.25rem; background: var(--card); }
+.faq__item summary { font-size: 0.92rem; font-weight: 600; padding: 1.1rem 0; cursor: pointer; list-style: none; position: relative; padding-right: 2rem; }
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__item summary::after { content: '+'; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 1.3rem; color: var(--accent); font-weight: 300; }
+.faq__item[open] summary::after { content: '−'; }
+.faq__item p { font-size: 0.85rem; line-height: 1.7; color: var(--text-secondary); padding: 0 0 1.1rem; margin: 0; }
+
+@media (max-width: 768px) {
+    .doctors { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+}
