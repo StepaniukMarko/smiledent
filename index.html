@@ -582,11 +582,34 @@ document.querySelectorAll('[data-ba]').forEach(function(slider){
     bar.className='sticky-cta';
     bar.innerHTML='<span class="sticky-cta__text">🦷 Безкоштовна консультація сьогодні</span><a href="#contact" class="sticky-cta__btn" onclick="this.closest(\'.sticky-cta\').style.display=\'none\'">Записатися</a><button class="sticky-cta__close" aria-label="Закрити">✕</button>';
     document.body.appendChild(bar);
-    bar.querySelector('.sticky-cta__close').onclick=function(){bar.style.display='none';};
+
+    var dismissed=false;
+    bar.querySelector('.sticky-cta__close').onclick=function(){dismissed=true;bar.style.display='none';};
+
+    // Show bar after hero scrolled past
+    var pastHero=false;
     var heroObs=new IntersectionObserver(function(entries){
-        bar.classList.toggle('sticky-cta--visible',!entries[0].isIntersecting);
+        pastHero=!entries[0].isIntersecting;
+        update();
     },{threshold:0});
     heroObs.observe(hero);
+
+    // Hide bar when contact section is in view (so it never covers the form)
+    var atContact=false;
+    var contact=document.getElementById('contact');
+    if(contact){
+        var contactObs=new IntersectionObserver(function(entries){
+            atContact=entries[0].isIntersecting;
+            update();
+        },{threshold:0.15});
+        contactObs.observe(contact);
+    }
+
+    function update(){
+        if(dismissed)return;
+        var show = pastHero && !atContact;
+        bar.classList.toggle('sticky-cta--visible', show);
+    }
 })();
 </script>
 

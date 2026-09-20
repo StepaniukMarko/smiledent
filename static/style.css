@@ -779,3 +779,31 @@ p { color: var(--text-secondary); font-size: 0.95rem; }
     .trust__stats { grid-template-columns: 1fr !important; }
 }
 /* ===== END MOBILE SAFETY LAYER ===== */
+
+
+/* ===== STICKY / FLOATING CTA OVERLAP FIX ===== */
+@media(max-width:768px){
+    /* Reserve space so nothing is hidden under the sticky bar */
+    body { padding-bottom: 88px; }
+    body { padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px)); }
+
+    /* Remove the duplicate round floating button — sticky bar covers this role */
+    .float-cta { display: none !important; }
+
+    /* Sticky bar: safe-area + z-index above content but BELOW header(100)/menu */
+    .sticky-cta {
+        z-index: 90 !important;
+        padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+    /* Mobile menu must sit above the sticky bar when open */
+    .mobile-menu { z-index: 300 !important; }
+    .header { z-index: 310 !important; }
+
+    /* Last section (contact) must clear the bar fully */
+    #contact { padding-bottom: 3rem; }
+    .footer, footer { padding-bottom: calc(2rem + 88px); }
+}
+
+/* When contact form is in view, hide sticky bar so it never covers the form/submit */
+.sticky-cta--hidden { transform: translateY(120%) !important; }
+/* ===== END STICKY / FLOATING CTA OVERLAP FIX ===== */
